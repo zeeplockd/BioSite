@@ -1,16 +1,99 @@
-<!doctype html>
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callum's Coding Portfolio</title>
     <style>
-      body {
-        background: #707070;
-        font-family: sans-serif;
-        color: #c7c7c7;
-      }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .content {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .skill {
+            flex: 1 1 45%;
+            padding: 10px;
+            margin: 10px;
+            background: #f1f1f1;
+            border-radius: 5px;
+        }
+        .contact-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background: #333;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        .contact-btn:hover {
+            background: #555;
+        }
     </style>
-  </head>
-  <body>
-    <h1>Hello, stranger.</h1>
-    <p>My name is Callum, or zeeplockd as some may know me. I am a programmer, hardware engineer, Minecrafter and most of all professional idiot.</p>
-  </body>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Callum's Coding Portfolio</h1>
+        </div>
+    </header>
+    <div class="container content">
+        <h2>About Me</h2>
+        <p>Hi, I'm Callum, a 14-year-old coding enthusiast. I was born in Australia and moved to Scotland in 2023. I'm skilled in Java, Python, JavaScript, Assembly, logic gates, and more.</p>
+        
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skill">
+                <h3>Java</h3>
+                <p>Proficient in building robust applications and systems.</p>
+            </div>
+            <div class="skill">
+                <h3>Python</h3>
+                <p>Experienced in scripting, automation, and data analysis.</p>
+            </div>
+            <div class="skill">
+                <h3>JavaScript</h3>
+                <p>Skilled in creating dynamic and interactive web applications.</p>
+            </div>
+            <div class="skill">
+                <h3>Assembly</h3>
+                <p>Knowledgeable in low-level programming for performance optimization.</p>
+            </div>
+            <div class="skill">
+                <h3>Logic Gates</h3>
+                <p>Understanding of digital circuits and hardware design.</p>
+            </div>
+        </div>
+
+        <a href="mailto:callum@example.com?subject=Service%20Inquiry&body=Hi%20Callum,%20I%27d%20like%20to%20discuss%20a%20project." class="contact-btn">Contact Me</a>
+    </div>
+</body>
 </html>
