@@ -4,75 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Callum's Coding Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 1em 0;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-        }
-        .content {
-            padding: 20px;
-            background: #fff;
-            margin-top: 20px;
-        }
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .skill {
-            flex: 1 1 45%;
-            padding: 10px;
-            margin: 10px;
-            background: #f1f1f1;
-            border-radius: 5px;
-        }
-        .contact-section {
-            margin-top: 20px;
-            text-align: center;
-        }
-        .contact-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
-            background: #333;
-            color: #fff;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background 0.3s ease;
-        }
-        .contact-btn:hover {
-            background: #555;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Callum's Coding Portfolio</h1>
-        </div>
-    </header>
-    <div class="container content">
-        <h2>About Me</h2>
+        <h1>Callum's Coding Portfolio</h1>
         <p>Hi, I'm Callum, a 14-year-old coding enthusiast. I was born in Australia and moved to Scotland in 2023. I'm skilled in Java, Python, JavaScript, Assembly, logic gates, and more.</p>
-        
+    </header>
+
+    <section class="skills-section">
         <h2>Skills</h2>
         <div class="skills">
             <div class="skill">
@@ -96,11 +36,11 @@
                 <p>Understanding of digital circuits and hardware design.</p>
             </div>
         </div>
+    </section>
 
-        <div class="contact-section">
-            <h2>Interested in hiring me for a freelancing job? Cheap rates!</h2>
-            <a href="mailto:master.callum.burrows@gmail.com?subject=Service%20Inquiry&body=Hi%20Callum,%20I%27d%20like%20to%20discuss%20a%20project." class="contact-btn">Contact Me</a>
-        </div>
+    <div class="contact-section">
+        <h2>Interested in hiring me for a freelancing job? Cheap rates!</h2>
+        <a href="mailto:master.callum.burrows@gmail.com?subject=Service%20Inquiry&body=Hi%20Callum,%20I%27d%20like%20to%20discuss%20a%20project." class="contact-btn">Contact Me</a>
     </div>
 </body>
 </html>
