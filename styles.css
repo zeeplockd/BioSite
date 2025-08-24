@@ -9,7 +9,16 @@ body {
   padding: 0;
 }
 
-#backgroundcanvas {
+.section {
+  border: 2px solid #222;
+  background: #333;
+  color: #ccc;
+  padding: 2rem;
+  border-radius: 32px;
+  margin: 1rem;
+}
+
+.background {
   position: fixed;
   top: 0;
   left: 0;
@@ -37,25 +46,16 @@ body {
   }
 }
 
-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
 .header {
   text-transform: lowercase;
+  text-align: center;
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  margin-bottom: 3rem;
   justify-content: center;
   text-align: left;
   padding: 1.5rem;
-  background: #333;
-  border: 2px solid #222;
-  margin: 0;
   font-size: 1.5rem;
-  color: #ccc;
   font-weight: 600;
   border-radius: 32px;
 }
@@ -71,14 +71,13 @@ h1 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 0;
-  margin-bottom: 2rem;
 }
 
 .links a {
   text-transform: uppercase;
-  background: #333;
+  background: #444;
   padding: 1.25rem;
-  border: 2px solid #222;
+  border: 2px solid #333;
   color: #fff;
   text-decoration: none;
   font-weight: 700;
@@ -102,9 +101,39 @@ h1 {
 }
 
 .links a:hover {
-  background: #444;
+  background: #555;
   border-color: #fff;
-  transform: scale(1.02);
+}
+
+.tech {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 1.5rem;
+}
+
+.tech a {
+  text-transform: uppercase;
+  background: #444;
+  padding: 1.25rem;
+  width: 8rem;
+  border: 2px solid #333;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+  display: block;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 32px;
+}
+
+.tech a:hover {
+  background: #555;
+  border-color: #fff;
 }
 
 @media (max-width: 768px) {
@@ -118,15 +147,7 @@ h1 {
   }
 }
 
-.bio {
-  background: #333;
-  padding: 2rem;
-  border: 2px solid #222;
-  border-radius: 32px;
-}
-
 .bio p {
-  color: #ccc;
   line-height: 1.8;
   font-size: 1rem;
   margin: 0;
