@@ -11,14 +11,13 @@ body {
 
 .section {
   border: 2px solid #222;
-  background: #333;
+  background: #2a2a2a;
   color: #ccc;
   padding: 2rem;
   border-radius: 32px;
   margin: 1rem;
 }
 
-/* Music player styles */
 .music-player-center {
   position: fixed;
   left: 1.5vw;
@@ -33,6 +32,7 @@ body {
   background: none;
   box-shadow: none;
 }
+
 .music-player {
   display: flex;
   align-items: stretch;
@@ -69,19 +69,23 @@ body {
   box-sizing: border-box;
   z-index: 1;
 }
+
 .music-player.show-info .play-toggle {
   border-radius: 32px 0 0 32px;
   width: 56px;
   min-width: 56px;
 }
+
 .play-toggle:hover {
   background: #555;
   border-color: #fff;
 }
+
 .icon-play, .icon-pause {
   width: 32px;
   height: 32px;
 }
+
 .music-info {
   background: #444;
   color: #fff;
@@ -104,11 +108,13 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+
 .music-player.show-info .music-info {
   opacity: 1;
   pointer-events: auto;
   transform: translateX(0) scaleX(1);
 }
+
 .music-info .track-title {
   font-weight: bold;
 }
