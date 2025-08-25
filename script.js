@@ -1,4 +1,5 @@
 // Music player logic
+
 const playToggle = document.querySelector('.play-toggle');
 const iconPlay = document.querySelector('.icon-play');
 const iconPause = document.querySelector('.icon-pause');

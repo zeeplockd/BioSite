@@ -91,7 +91,7 @@ body {
   padding: 0.5rem 1.5rem 0.5rem 1.2rem;
   font-size: 1.1rem;
   font-weight: 700;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   opacity: 0;
   transform: translateX(-24px) scaleX(0.8);
   pointer-events: none;
