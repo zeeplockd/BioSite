@@ -1,3 +1,47 @@
+// Music player logic
+const playToggle = document.querySelector('.play-toggle');
+const iconPlay = document.querySelector('.icon-play');
+const iconPause = document.querySelector('.icon-pause');
+const musicPlayer = document.querySelector('.music-player');
+const musicInfo = document.querySelector('.music-info');
+let audio = new Audio('music.mp3');
+
+function resetAudio() {
+    audio.pause();
+    audio.currentTime = 0;
+}
+
+function showInfo(isPlaying) {
+    if (isPlaying) {
+        musicPlayer.classList.add('show-info');
+    } else {
+        musicPlayer.classList.remove('show-info');
+    }
+}
+
+playToggle.addEventListener('click', () => {
+    if (audio.paused) {
+        resetAudio();
+        audio.play();
+        iconPlay.style.display = 'none';
+        iconPause.style.display = 'inline';
+        showInfo(true);
+    } else {
+        resetAudio();
+        iconPlay.style.display = 'inline';
+        iconPause.style.display = 'none';
+        showInfo(false);
+    }
+});
+
+audio.addEventListener('ended', () => {
+    iconPlay.style.display = 'inline';
+    iconPause.style.display = 'none';
+    showInfo(false);
+});
+
+// Background animation for the canvas
+
 const canvas = document.querySelector('.background');
 const ctx = canvas.getContext('2d');
 
