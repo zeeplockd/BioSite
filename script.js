@@ -5,12 +5,25 @@ const iconPlay = document.querySelector('.icon-play');
 const iconPause = document.querySelector('.icon-pause');
 const musicPlayer = document.querySelector('.music-player');
 const musicInfo = document.querySelector('.music-info');
-let audio = new Audio('music.mp3');
+const trackTitle = document.querySelector('.track-title');
+const trackArtist = document.querySelector('.track-artist');
+
+const songs = [
+    { file: 'songs/1.mp3', artist: 'Local H', name: 'Bound for the Floor' },
+    { file: 'songs/2.mp3', artist: 'Hum', name: 'The Pod' },
+];
+
+let currentSong = null;
+let audio = null;
+
 
 function resetAudio() {
-    audio.pause();
-    audio.currentTime = 0;
+    if (audio) {
+        audio.pause();
+        audio.currentTime = 0;
+    }
 }
+
 
 function showInfo(isPlaying) {
     if (isPlaying) {
@@ -20,13 +33,38 @@ function showInfo(isPlaying) {
     }
 }
 
+function pickRandomSong() {
+    const idx = Math.floor(Math.random() * songs.length);
+    return songs[idx];
+}
+
+function updateSongInfo(song) {
+    if (trackTitle && trackArtist) {
+        trackTitle.textContent = song.name;
+        trackArtist.textContent = song.artist;
+    }
+}
+
+
 playToggle.addEventListener('click', () => {
-    if (audio.paused) {
+    if (!audio || audio.paused) {
+        // Pick a random song
+        currentSong = pickRandomSong();
         resetAudio();
+        if (audio) {
+            audio.remove();
+        }
+        audio = new Audio(currentSong.file);
+        updateSongInfo(currentSong);
         audio.play();
         iconPlay.style.display = 'none';
         iconPause.style.display = 'inline';
         showInfo(true);
+        audio.addEventListener('ended', () => {
+            iconPlay.style.display = 'inline';
+            iconPause.style.display = 'none';
+            showInfo(false);
+        });
     } else {
         resetAudio();
         iconPlay.style.display = 'inline';
@@ -35,11 +73,9 @@ playToggle.addEventListener('click', () => {
     }
 });
 
-audio.addEventListener('ended', () => {
-    iconPlay.style.display = 'inline';
-    iconPause.style.display = 'none';
-    showInfo(false);
-});
+
+// Remove global audio ended event, now handled per song
+
 
 // Background animation for the canvas
 

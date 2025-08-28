@@ -43,6 +43,7 @@ body {
   transition: width 0.35s cubic-bezier(.4,1.4,.6,1);
 }
 
+
 .play-toggle {
   background: #444;
   border: 2px solid #333;
