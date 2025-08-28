@@ -9,8 +9,18 @@ const trackTitle = document.querySelector('.track-title');
 const trackArtist = document.querySelector('.track-artist');
 
 const songs = [
-    { file: 'songs/1.mp3', artist: 'Local H', name: 'Bound for the Floor' },
-    { file: 'songs/2.mp3', artist: 'Hum', name: 'The Pod' },
+    { file: "songs/BoundForTheFloor.mp3", artist: "Local H", name: "Bound for the Floor" },
+    { file: "songs/Covet.mp3", artist: "Basement", name: "Covet" },
+    { file: "songs/HeadInTheCeilingFan.mp3", artist: "Title Fight", name: "Head In The Ceiling Fan" },
+    { file: "songs/IHateItToo.mp3", artist: "Hum", name: "I Hate It Too" },
+    { file: "songs/LittleDipper.mp3", artist: "Hum", name: "Little Dipper" },
+    { file: "songs/Mayonaise.mp3", artist: "The Smashing Pumpkins", name: "Mayonaise" },
+    { file: "songs/NoSurprises.mp3", artist: "Radiohead", name: "No Surprises" },
+    { file: "songs/Shed.mp3", artist: "Title Fight", name: "Shed" },
+    { file: "songs/Stars.mp3", artist: "Hum", name: "Stars" },
+    { file: "songs/SuicideMachine.mp3", artist: "Hum", name: "Suicide Machine" },
+    { file: "songs/TheBoy.mp3", artist: "The Smashing Pumpkins", name: "The Boy" },
+    { file: "songs/ThePod.mp3", artist: "Hum", name: "The Pod" }
 ];
 
 let currentSong = null;
