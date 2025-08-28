@@ -36,18 +36,32 @@
 			<a>Docker</a>
 		</section>
 	</div>
+
 	<div class="music-player-center unselectable">
 		<div class="music-player">
-			<button class="play-toggle" aria-label="Play music">
-				<!-- Play SVG (default) -->
-				<svg class="icon-play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"></path></svg>
-								 <!-- Stop SVG (hidden by default) -->
-								 <svg class="icon-pause" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32" style="display:none">
-									 <rect x="6" y="6" width="12" height="12" rx="3"/>
-								 </svg>
-			</button>
 			<div class="music-info">
-				<span class="track-title">Bound for the Floor</span>&nbsp;-&nbsp;<span class="track-artist">Local H</span>
+				<span class="track-title">Bound for the Floor</span>
+				<span class="track-artist">Local H</span>
+			</div>
+			<div class="music-controls">
+				<button class="prev-btn" aria-label="Previous song">
+					<svg class="icon-prev" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" width="32" height="32">
+						<path d="M25.5 8 Q25.5 7 24.5 7 L14.8 15.2 Q14 16 14.8 16.8 L24.5 25 Q25.5 25 25.5 24 Q25.5 24 25.5 8 Z" />
+						<rect x="6" y="7" width="4" height="18" rx="2"/>
+					</svg>
+				</button>
+				<button class="play-toggle" aria-label="Play or pause">
+					<svg class="icon-play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"></path></svg>
+					<svg class="icon-pause" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32" style="display:none">
+						<rect x="6" y="6" width="12" height="12" rx="3"/>
+					</svg>
+				</button>
+				<button class="next-btn" aria-label="Next song">
+					<svg class="icon-next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" width="32" height="32">
+						<path d="M6.5 8 Q6.5 7 7.5 7 L17.2 15.2 Q18 16 17.2 16.8 L7.5 25 Q6.5 25 6.5 24 Q6.5 24 6.5 8 Z" />
+						<rect x="22" y="7" width="4" height="18" rx="2"/>
+					</svg>
+				</button>
 			</div>
 		</div>
 	</div>
